@@ -5,11 +5,15 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath "jp.leafytree.gradle:gradle-android-scala-plugin:2.2.1-SNAPSHOT"
+
     }
 }
 
 apply plugin: 'com.android.application'
+apply plugin: "jp.leafytree.android-scala"
+
 
 repositories {
     jcenter()
@@ -20,6 +24,8 @@ dependencies {
     compile "com.android.support:support-v13:24.1.1"
     compile "com.android.support:cardview-v7:24.1.1"
     compile "com.android.support:appcompat-v7:24.1.1"
+    compile "org.scala-lang:scala-library:2.11.7"
+
 }
 
 // The sample build uses multiple directories to
